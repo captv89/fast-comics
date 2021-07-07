@@ -1,60 +1,72 @@
-baseURL = "https://gohugo.io"
-title = "Hugo Comics"
-author = "CaptV89"
-paginate = 4
-theme = ["hulga"]
+baseURL = "https://example.com"
 languageCode = "en"
 DefaultContentLanguage = "en"
-enableInlineShortcodes = true
-ignoreErrors = ["error-remote-getjson"]
+title = "Hugo Comics"
+paginate = 5
+theme = "hulga"
 
 [params]
-subtitle = "Blazing Fast Comic Site"
-toc = false
-copyright = "Copyright © 2021 | All Rights Reserved"
-pwa = false
+  # show in HTML meta tag
+  author = "xxx"
+  keywords = "HTML, hugo, CSS"
+  description = "xxx's blog, xxx xx xxxx"
+
+  # change bulma's primary color
+  primaryColor = "#1793d0"
+
+  # subtitle on homepage
+  subtitle = "This is a subtitle"
+
+  # copyright text on footer
+  copyright = "Copyright © 2020 wlh. All rights reserved."
+
+  # enable katex rendering on every post page
+  math = true
+
+  # enable postcss, mainly for css purge (129kB->20kB->4.8kB gzipped, but this makes build slower)
+  postcss = false
+
+  # enable toc on every post page
+  toc = true
+
+  # enable TOC auto collapse
+  autoCollapseToc = true
+
+  # enable prefers-color-scheme:dark
+  darkMedia = true
+
+  # enable hero section's is-bold effect
+  heroBold = true
+
+  # enable PWA, prepare your icons and DON'T forget to modify manifest.json
+  pwa = true
+
+  # disable jsdelivr cdn, default false
+  noCDN = false
+
+# to enable different hightlight themes in light/dark mode 
+[markup]
+  [markup.highlight]
+    noClasses = false
 
 [menu]
-
+  [[menu.main]]
+    identifier = "index"
+    name = "Home"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    identifier = "archives"
+    name = "Tags"
+    url = "/tags/"
+    weight = 2
   [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 10
-  [[menu.main]]
-    identifier = "work"
-    name = "Work"
-    url = "/work/"
-    weight = 9
+    weight = 3
 
 [taxonomies]
 category = "categories"
 tag = "tags"
-series = "series"
 
-[privacy]
-
-  [privacy.vimeo]
-    disabled = false
-    simple = true
-
-  [privacy.twitter]
-    disabled = false
-    enableDNT = true
-    simple = true
-
-  [privacy.instagram]
-    disabled = false
-    simple = true
-
-  [privacy.youtube]
-    disabled = false
-    privacyEnhanced = true
-
-[services]
-
-  [services.instagram]
-    disableInlineCSS = true
-
-  [services.twitter]
-    disableInlineCSS = true

@@ -4,14 +4,15 @@ title : "Kane And Able"
 date : "2021-03-10"
 description : "A brief description of Gallery"
 tags : [
-    "shortcodes",
+    "split",
     "comic",
+    "able",
 ]
 categories : [
-    "comic",
-    "capt",
+    "Marvel",
+    "Action",
 ]
-series : ["Gallery Test"]
+series : ["Comic"]
 aliases : ["kane-able"]
 ---
 
