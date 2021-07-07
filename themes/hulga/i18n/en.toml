@@ -1,0 +1,20 @@
+[categories]
+other = "Categories"
+
+[tags]
+other = "Tags"
+
+[prev_page]
+other = "Previous"
+
+[next_page]
+other = "Next"
+
+[archives_count]
+other = "There are {{ .Count }} articles in this blog"
+
+[archives]
+other = "Archives"
+
+[404-info]
+other = "Page not found, please check the URL"

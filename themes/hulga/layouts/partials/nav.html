@@ -1,0 +1,23 @@
+<nav class="navbar is-primary">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class=navbar-item href="{{ .Site.BaseURL }}">
+        {{ .Site.Title }}
+      </a>
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div class="navbar-menu" id="navMenu">
+      <div class="navbar-end">
+        {{ range .Site.Menus.main.ByWeight -}}
+        {{ .Pre }}
+        <a class="navbar-item" href="{{ .URL }}" title="{{ .Identifier }}">{{- .Name -}}</a>
+        {{ .Post }}
+        {{- end }}
+      </div>
+    </div>
+  </div>
+</nav>
