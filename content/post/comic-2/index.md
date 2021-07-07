@@ -12,8 +12,6 @@ categories : [
     "Marvel",
     "Action",
 ]
-series : ["Comic"]
-aliases : ["captain-america"]
 ---
 
 

@@ -56,15 +56,20 @@ theme = "hulga"
     url = "/"
     weight = 1
   [[menu.main]]
-    identifier = "archives"
+    identifier = "tags"
     name = "Tags"
     url = "/tags/"
     weight = 2
   [[menu.main]]
+    identifier = "categories"
+    name = "Categories"
+    url = "/categories/"
+    weight = 3
+  [[menu.main]]
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 3
+    weight = 5
 
 [taxonomies]
 category = "categories"
