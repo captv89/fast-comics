@@ -1,11 +1,24 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" />
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script> -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.7/lightgallery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.7/css/lightgallery.css" />
 
 {{ $image := (.Page.Resources.ByType "image") }}
 {{ with $image }}
-{{ range . }}
-{{ $resized := .Fill "300x250 q20" }}
-<a href="{{ .Permalink }}" data-lightbox="x"><img src="{{ $resized.Permalink }}" /></a>
+<div class="img-grid" id="lightgallery">
+    {{ range . }}
+    {{$imgPath := .Permalink }}
+    {{ $resized := .Fill "250x250 q20" }}
+    <a class="img-thumb" href="{{ .Permalink }}"><img class="img-small" src="{{ $resized.Permalink }}" /></a>
+    <!-- <a href="{{ .Permalink }}" data-lightbox="x"><img src="{{ $resized.Permalink }}" /></a> -->
+    {{ end }}
+</div>
 {{ end }}
-{{ end }}
+
+<script type="text/javascript">
+    lightGallery(document.getElementById('lightgallery'), {
+        speed: 500,
+    });
+</script>
