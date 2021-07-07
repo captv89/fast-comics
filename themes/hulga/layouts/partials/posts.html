@@ -9,17 +9,13 @@
               {{ $paginator := .Paginate (where (where .Site.Pages "Type" "comics") "Kind" "page") }}
               {{ range $paginator.Pages }}
               <div class="box post-box">
-                {{ with .Params.Tags }}
-                <div class="post-box-tags">
-                  {{ range .}}
-                  <span class="post-tag post-box-tag">
-                    <a href="{{ $ctx.Site.BaseURL }}{{ "/tags/" | relLangURL }}{{ . | urlize}}">#{{ . }}</a>
-                  </span>
-                  {{ end }}
-                </div>
-                {{ end }}
                 <div class="post-box-title">
                   <a href="{{ .Permalink }}" class="title is-size-5">{{ .Title }}</a>
+                </div>
+                <div>
+                  {{ range first 1 (.Resources.ByType "image") }}<img class="list-img" src="{{ .RelPermalink }}"
+                    alt="{{ .Title }}" href=" {{ .RelPermalink }}">
+                  {{ end }}
                 </div>
                 <div class="post-box-meta">
                   {{ .Date.Format "2006/01/02" }}
@@ -31,6 +27,15 @@
                   {{ end }}
                   {{ end }}
                 </div>
+              </div>
+              {{ end }}
+              {{ with .Params.Tags }}
+              <div class="post-box-tags">
+                {{ range .}}
+                <span class="post-tag post-box-tag">
+                  <a href="{{ $ctx.Site.BaseURL }}{{ "/tags/" | relLangURL }}{{ . | urlize}}">#{{ . }}</a>
+                </span>
+                {{ end }}
               </div>
               {{ end }}
             </div>

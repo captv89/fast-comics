@@ -155,3 +155,10 @@ body {
   display: flex;
   flex-wrap: wrap;
 }
+
+.list-img {
+  position: relative;
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+}
