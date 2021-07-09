@@ -2,16 +2,22 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script> -->
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.7/lightgallery.min.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.7/css/lightgallery.css" />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/lightgallery.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/plugins/zoom/lg-zoom.umd.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/plugins/fullscreen/lg-fullscreen.umd.js">
+</script>
+
+
+
 
 {{ $image := (.Page.Resources.ByType "image") }}
 {{ with $image }}
-<div class="img-grid" id="lightgallery">
+<div id="lightgallery">
     {{ range . }}
-    {{$imgPath := .Permalink }}
     {{ $resized := .Fill "250x250 q20" }}
-    <a class="img-thumb" href="{{ .Permalink }}"><img class="img-small" src="{{ $resized.Permalink }}" /></a>
+    <a href="{{ .Permalink }}"><img src="{{ $resized.Permalink }}" /></a>
     <!-- <a href="{{ .Permalink }}" data-lightbox="x"><img src="{{ $resized.Permalink }}" /></a> -->
     {{ end }}
 </div>
@@ -19,6 +25,8 @@
 
 <script type="text/javascript">
     lightGallery(document.getElementById('lightgallery'), {
+        plugins: [lgZoom, lgThumbnail, lgFullscreen],
         speed: 500,
+        mode: 'fade',
     });
 </script>

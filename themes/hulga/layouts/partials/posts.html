@@ -9,8 +9,9 @@
               {{ $paginator := .Paginate (where (where .Site.Pages "Type" "post") "Kind" "page") }}
               {{ range $paginator.Pages }}
               <div class="box post-box">
+                {{ $comic := .Permalink }}
                 {{ range first 1 (.Resources.ByType "image") }}
-                <img class="list-img" src="{{ .RelPermalink }}" alt="{{ .Title }}">
+                <a href="{{ $comic }}"><img class="list-img" src="{{ .RelPermalink }}" alt="{{ .Title }}"></a>
                 {{ end }}
                 {{ with .Params.Tags }}
                 <div class="post-box-tags">
