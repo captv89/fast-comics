@@ -18,7 +18,7 @@ theme = "hulga"
   subtitle = "Your Blazing Fast Comic Site"
 
   # copyright text on footer
-  copyright = "Copyright © 2021 wlh. All rights reserved."
+  copyright = "Copyright © 2021 | All rights reserved."
 
   # enable katex rendering on every post page
   math = false
