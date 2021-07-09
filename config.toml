@@ -1,33 +1,33 @@
-baseURL = "https://example.com"
+baseURL = "https://captv89.github.io/fast-comics/"
 languageCode = "en"
 DefaultContentLanguage = "en"
-title = "Hugo Comics"
+title = "Fast Comics"
 paginate = 5
 theme = "hulga"
 
 [params]
   # show in HTML meta tag
-  author = "xxx"
-  keywords = "HTML, hugo, CSS"
-  description = "xxx's blog, xxx xx xxxx"
+  author = "CaptV89"
+  keywords = "HTML, hugo, CSS, Comic"
+  description = "Blazing Fast Comic Site"
 
   # change bulma's primary color
   primaryColor = "#1793d0"
 
   # subtitle on homepage
-  subtitle = "This is a subtitle"
+  subtitle = "Your Blazing Fast Comic Site"
 
   # copyright text on footer
-  copyright = "Copyright © 2020 wlh. All rights reserved."
+  copyright = "Copyright © 2021 wlh. All rights reserved."
 
   # enable katex rendering on every post page
-  math = true
+  math = false
 
   # enable postcss, mainly for css purge (129kB->20kB->4.8kB gzipped, but this makes build slower)
   postcss = false
 
   # enable toc on every post page
-  toc = true
+  toc = false
 
   # enable TOC auto collapse
   autoCollapseToc = true

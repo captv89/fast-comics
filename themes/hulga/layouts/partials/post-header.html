@@ -13,11 +13,11 @@
         {{- end -}}
         {{- $ctx := . -}}
         {{ with .Params.Categories }} ・
-          {{ range .}}
-            <span class="post-tag post-meta">
-              <a href="{{ $ctx.Site.BaseURL }}{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
-            </span>
-          {{ end }}
+        {{ range .}}
+        <span class="post-tag post-meta">
+          <a href="{{ $ctx.Params.BaseURL }}{{ "/categories/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+        </span>
+        {{ end }}
         {{ end }}
         {{- if eq .Type "archives" -}}
         {{- $count := len (where (where .Site.Pages "Type" "post") "Kind" "page") -}}
@@ -28,7 +28,7 @@
       <div class="tagbox post-meta">
         {{ range . }}
         <span class="post-tag">
-          <a href="{{ $ctx.Site.BaseURL }}{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
+          <a href="{{ $ctx.Params.BaseURL }}{{ "/tags/" | relLangURL }}{{ . | urlize }}">#{{ . }}</a>
         </span>
         {{ end }}
       </div>

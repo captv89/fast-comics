@@ -1,1 +1,1 @@
-This is about me!
+I am Tech Savvy Sailor who loves comics. Enjoy your blazing fast comic site!
