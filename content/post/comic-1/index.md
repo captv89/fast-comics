@@ -1,18 +1,18 @@
----
-author : "CaptV89"
-title : "Kane And Able"
-date : "2021-03-10"
-description : "A brief description of Gallery"
-tags : [
++++
+author = "CaptV89"
+title = "Kane And Able"
+date = "2021-03-10"
+description = "A brief description of Gallery"
+tags = [
     "split",
     "comic",
     "able",
 ]
-categories : [
+categories = [
     "Marvel",
     "Action",
 ]
----
++++
 
 
 {{< gallery match="img/*" >}}

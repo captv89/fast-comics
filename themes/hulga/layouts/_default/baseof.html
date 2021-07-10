@@ -1,11 +1,12 @@
-<!DOCTYPE html> 
-<html {{if .Site.LanguageCode}}lang="{{.Site.LanguageCode}}"{{end}}>
+<!DOCTYPE html>
+<html {{if .Site.LanguageCode}}lang="{{.Site.LanguageCode}}" {{end}}>
 {{- partial "head.html" . -}}
 
 <body>
   <div id="main">
     {{- block "main" . }}{{- end }}
   </div>
+  <!-- {{- partial "search.html" . -}} -->
   {{- partial "footer.html" . -}}
   {{- partial "backtotop.html" . -}}
   {{- partial "navburger.html" . -}}

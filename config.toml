@@ -3,7 +3,7 @@ languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Fast Comics"
 paginate = 5
-theme = "hulga"
+theme = ["hulga"]
 
 [params]
   # show in HTML meta tag

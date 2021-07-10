@@ -1,0 +1,30 @@
+{
+  "name": "fast-comics",
+  "version": "1.0.0",
+  "description": "Blazing fast comic site",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/captv89/fast-comics.git"
+  },
+  "keywords": [
+    "comic",
+    "hugo",
+    "npm",
+    "grunt"
+  ],
+  "author": "CaptV89",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/captv89/fast-comics/issues"
+  },
+  "homepage": "https://captv89.github.io/fast-comics",
+  "devDependencies": {
+    "grunt": "^1.4.1",
+    "string": "^3.3.3",
+    "toml": "^3.0.0"
+  }
+}

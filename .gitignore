@@ -2,6 +2,7 @@
 public/
 resources/*
 _vendor/
+node_modules/
 
 ## OS Files
 # Windows
