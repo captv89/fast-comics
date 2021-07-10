@@ -33,19 +33,23 @@
   {{ if .Site.Params.author -}}
   <meta name="author" content="{{ .Params.author }}">
   {{- end }}
-  <link rel="icon" type="image/png" href="/fav/favicon-196x196.png" sizes="196x196" />
-  <link rel="icon" type="image/png" href="/fav/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/png" href="/fav/favicon-32x32.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="/fav/favicon-16x16.png" sizes="16x16" />
-  <link rel="icon" type="image/png" href="/fav/favicon-128.png" sizes="128x128" />
-  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/fav/apple-touch-icon-57x57.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/fav/apple-touch-icon-114x114.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/fav/apple-touch-icon-72x72.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/fav/apple-touch-icon-144x144.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/fav/apple-touch-icon-60x60.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/fav/apple-touch-icon-120x120.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/fav/apple-touch-icon-76x76.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/fav/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/fav/favicon-196x196.png" sizes="196x196" />
+  <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/fav/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/fav/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/fav/favicon-16x16.png" sizes="16x16" />
+  <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}/fav/favicon-128.png" sizes="128x128" />
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{ .Site.BaseURL }}/fav/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114"
+    href="{{ .Site.BaseURL }}/fav/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ .Site.BaseURL }}/fav/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144"
+    href="{{ .Site.BaseURL }}/fav/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="60x60" href="{{ .Site.BaseURL }}/fav/apple-touch-icon-60x60.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120"
+    href="{{ .Site.BaseURL }}/fav/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="{{ .Site.BaseURL }}/fav/apple-touch-icon-76x76.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152"
+    href="{{ .Site.BaseURL }}/fav/apple-touch-icon-152x152.png" />
   {{- $options := (dict "outputStyle" "compressed" "includePaths" (slice "sass")) }}
   {{- $lightScss := resources.Get "css/hulga.scss" }}
   {{- $darkScss := resources.Get "css/hulga-dark.scss" }}
@@ -65,8 +69,9 @@
   {{- end }}
   {{- end }}
   {{- if .Site.Params.pwa }}
-  <link rel="manifest" href="/manifest.json">
+  <link rel="manifest" href="{{ .Site.BaseURL }}/manifest.json">
   {{- end }}
   <!-- Ligtbox Stysheets -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/css/lightgallery-bundle.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.1.8/css/lightgallery-bundle.min.css"
+    integrity="sha256-NheBqmoxlbI4SUP1MoesBVhv9OxLo/SSjHow0yKV9CM=" crossorigin="anonymous">
 </head>

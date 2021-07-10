@@ -3,10 +3,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script> -->
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/lightgallery.umd.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/plugins/thumbnail/lg-thumbnail.umd.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/plugins/zoom/lg-zoom.umd.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.1.8/plugins/fullscreen/lg-fullscreen.umd.js">
+<!-- <script type="javascript" src="{{ .Site.BaseURL }}/js/lightgallery.min.js"></script> -->
+<script
+    src="https://cdn.jsdelivr.net/combine/npm/lightgallery@2,npm/lightgallery@2/plugins/zoom/lg-zoom.umd.min.js,npm/lightgallery@2/plugins/video/lg-video.umd.min.js,npm/lightgallery@2/plugins/thumbnail/lg-thumbnail.umd.min.js,npm/lightgallery@2/plugins/share/lg-share.umd.min.js,npm/lightgallery@2/plugins/relativeCaption/lg-relative-caption.umd.min.js,npm/lightgallery@2/plugins/autoplay/lg-autoplay.umd.min.js,npm/lightgallery@2/plugins/fullscreen/lg-fullscreen.umd.min.js,npm/lightgallery@2/plugins/mediumZoom/lg-medium-zoom.umd.min.js">
 </script>
 
 
@@ -16,7 +15,7 @@
 {{ with $image }}
 <div id="lightgallery">
     {{ range . }}
-    {{ $resized := .Fill "250x250 q20" }}
+    {{ $resized := .Fill "300x250 q20" }}
     <a href="{{ .Permalink }}"><img src="{{ $resized.Permalink }}" /></a>
     <!-- <a href="{{ .Permalink }}" data-lightbox="x"><img src="{{ $resized.Permalink }}" /></a> -->
     {{ end }}
@@ -27,6 +26,5 @@
     lightGallery(document.getElementById('lightgallery'), {
         plugins: [lgZoom, lgThumbnail, lgFullscreen],
         speed: 500,
-        mode: 'fade',
     });
 </script>

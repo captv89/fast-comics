@@ -39,7 +39,7 @@ theme = ["hulga"]
   heroBold = true
 
   # enable PWA, prepare your icons and DON'T forget to modify manifest.json
-  pwa = true
+  pwa = false
 
   # disable jsdelivr cdn, default false
   noCDN = false
@@ -75,3 +75,15 @@ theme = ["hulga"]
 category = "categories"
 tag = "tags"
 
+# [outputFormats.Algolia]
+# baseName = "algolia"
+# isPlainText = true
+# mediaType = "application/json"
+# notAlternative = true
+
+# [params.algolia]
+# vars = ["title", "description", "date", "publishdate", "permalink"]
+# params = ["categories", "tags"]
+
+# [outputs]
+# home = ["HTML", "RSS", "Algolia"]

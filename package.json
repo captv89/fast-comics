@@ -4,7 +4,8 @@
   "description": "Blazing fast comic site",
   "main": "Gruntfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "algolia": "atomic-algolia"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
     "grunt": "^1.4.1",
     "string": "^3.3.3",
     "toml": "^3.0.0"
+  },
+  "dependencies": {
+    "atomic-algolia": "^0.3.19"
   }
 }
